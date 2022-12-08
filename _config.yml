@@ -5,15 +5,15 @@
 # Site
 title: 小下同学
 subtitle: 找不到北，就多看东西
-description: 安小下同学,闵令安,令安,小下,亲爱的安小下同学,小下同学,小小小下,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,php,laravel,golang,phper,docker
+# description: 安小下同学,闵令安,令安,小下,亲爱的安小下同学,小下同学,小小小下,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,php,laravel,golang,phper,docker
 keywords: 安小下同学,闵令安,令安,小下,亲爱的安小下同学,小下同学,小小小下,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,php,laravel,golang,phper,docker
-author: linganmin
+author: 安小下同学
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: //blog.linganmin.cn
+url: https://blog.linganmin.cn
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

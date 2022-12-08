@@ -5,13 +5,13 @@
 menu:
   首页: / || fas fa-home
   时间轴: /archives/ || fas fa-archive
-  标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
-  List||fas fa-list:
-    Music: /music/ || fas fa-music
-    Movie: /movies/ || fas fa-video
-  友链: /link/ || fas fa-link
-  关于: /about/ || fas fa-heart
+  # 标签: /tags/ || fas fa-tags
+  # 分类: /categories/ || fas fa-folder-open
+  # List||fas fa-list:
+    # Music: /music/ || fas fa-music
+    # Movie: /movies/ || fas fa-video
+  # 友链: /link/ || fas fa-link
+  # 关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -35,9 +35,9 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  fa fa-github: https://github.com/linganmin || Github
-  fa fa-envelope: mailto:saboranmin@gmail.com || Email
-  fac fa-weibo: https://m.weibo.cn/u/1793963601
+  fab fa-github: https://github.com/linganmin || Github
+  fas fa-envelope: mailto:saboranmin@gmail.com || Email
+  fab fa-weibo: https://www.weibo.com/u/1793963601 || Weibo
 
 
 # search (搜索)
@@ -83,7 +83,7 @@ favicon: https://graph.linganmin.cn/201206/fe9c5e8ef76354659ab9c6c8764d6f3d
 # Avatar (頭像)
 avatar:
   img: https://graph.linganmin.cn/200118/06177d8b92c66f2c3a6fd82cca544f51
-  effect: true
+  effect: false
 
 # Disable all banner image
 disable_top_img: false
@@ -198,11 +198,11 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: false
+  enable: true
   QR_code:
-    # - img: /img/wechat.jpg
+    - img: https://graph.linganmin.cn/200119/eed3e3ad8e1b81503989ef17fc2c5e7d?x-oss-process=image/format,webp/quality,q_60
     #   link:
-    #   text: wechat
+      text: 请我吃苹果
     # - img: /img/alipay.jpg
     #   link:
     #   text: alipay
@@ -218,7 +218,7 @@ post_edit:
 # Related Articles
 related_post:
   enable: true
-  limit: 6 # Number of posts displayed
+  limit: 3 # Number of posts displayed
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
 # figcaption (圖片描述文字)
@@ -243,23 +243,11 @@ noticeOutdate:
 # Share System (分享功能)
 # --------------------------------------
 
-# AddThis
-# https://www.addthis.com/
-addThis:
-  enable: false
-  pubid:
-
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
   enable: true
   sites: twitter,wechat,weibo
-
-# AddToAny
-# https://www.addtoany.com/
-addtoany:
-  enable: false
-  item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 
 # Comments System
 # --------------------------------------
@@ -275,34 +263,6 @@ comments:
   count: false # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
-# disqus
-# https://disqus.com/
-disqus:
-  shortname:
-  apikey: # For newest comments widget
-
-# Alternative Disqus - Render comments with Disqus API
-# DisqusJS 評論系統，可以實現在網路審查地區載入 Disqus 評論列表，兼容原版
-# https://github.com/SukkaW/DisqusJS
-disqusjs:
-  shortname:
-  apikey:
-  option:
-
-# livere (來必力)
-# https://www.livere.com/
-livere:
-  uid:
-
-# gitalk
-# https://github.com/gitalk/gitalk
-gitalk:
-  client_id:
-  client_secret:
-  repo:
-  owner:
-  admin:
-  option:
 
 # valine
 # https://valine.js.org
@@ -311,117 +271,10 @@ valine:
   appKey: Wjn8s1j6JAg3BbYxTNW3nMk9 # leancloud application app key
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: /img/comment_bg.png
+  bg: 
   visitor: false
   option:
 
-# waline - A simple comment system with backend support fork from Valine
-# https://waline.js.org/
-waline:
-  serverURL: # Waline server address url
-  bg: # waline background
-  pageview: false
-  option:
-
-# utterances
-# https://utteranc.es/
-utterances:
-  repo:
-  # Issue Mapping: pathname/url/title/og:title
-  issue_term: pathname
-  # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
-  light_theme: github-light
-  dark_theme: photon-dark
-
-# Facebook Comments Plugin
-# https://developers.facebook.com/docs/plugins/comments/
-facebook_comments:
-  app_id:
-  user_id: # optional
-  pageSize: 10 # The number of comments to show
-  order_by: social # social/time/reverse_time
-  lang: zh_TW # Language en_US/zh_CN/zh_TW and so on
-
-# Twikoo
-# https://github.com/imaegoo/twikoo
-twikoo:
-  envId:
-  region:
-  visitor: false
-  option:
-
-# Giscus
-# https://giscus.app/
-giscus:
-  repo:
-  repo_id:
-  category_id:
-  theme:
-    light: light
-    dark: dark
-  option:
-
-# Remark42
-# https://remark42.com/docs/configuration/frontend/
-remark42:
-  host: # Your Host URL
-  siteId: # Your Site ID
-  option:
-
-# Artalk
-# https://artalk.js.org/guide/frontend/config.html
-artalk:
-  server:
-  site:
-  visitor: false
-  option:
-
-# Chat Services
-# --------------------------------------
-
-# Chat Button [recommend]
-# It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: false
-
-# The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-chat_hide_show: false
-
-# chatra
-# https://chatra.io/
-chatra:
-  enable: false
-  id:
-
-# tidio
-# https://www.tidio.com/
-tidio:
-  enable: false
-  public_key:
-
-# daovoice
-# http://daovoice.io/
-daovoice:
-  enable: false
-  app_id:
-
-# gitter
-# https://gitter.im/
-gitter:
-  enable: false
-  room:
-
-# crisp
-# https://crisp.chat/en/
-crisp:
-  enable: false
-  website_id:
-
-# messenger
-# https://developers.facebook.com/docs/messenger-platform/discovery/facebook-chat-plugin/
-messenger:
-  enable: false
-  pageID:
-  lang: zh_TW # Language en_US/zh_CN/zh_TW and so on
 
 # Footer Settings
 # --------------------------------------
@@ -429,8 +282,8 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text:
-  copyright: true # Copyright of theme and framework
+  custom_text: <a href="http://beian.miit.gov.cn/"><img style="height:10px" src="https://img.alicdn.com/imgextra/i3/O1CN012VJ8YA22JOP4XNnCr_!!6000000007099-2-tps-20-20.png">苏ICP备16006718号</a>
+  copyright: false # Copyright of theme and framework
 
 # Analysis
 # --------------------------------------
@@ -551,11 +404,6 @@ activate_power_mode:
   shake: true #  open shake (抖動特效)
   mobile: false
 
-# Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
-fireworks:
-  enable: false
-  zIndex: 9999 # -1 or 9999
-  mobile: false
 
 # Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
 click_heart:
@@ -589,14 +437,14 @@ beautify:
 font:
   global-font-size:
   code-font-size:
-  font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif
-  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace, Helvetica Neue For Number
+  font-family: 
+  code-font-family: 
 
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
-  font_link:
+  font_link: https://fonts.googleapis.com/css?family=Titillium+Web
   font-family: Titillium Web, PingFang SC, Hiragino Sans GB, "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif
 
 # The setting of divider icon (水平分隔線圖標設置)
@@ -644,18 +492,18 @@ preloader:
 aside:
   enable: true
   hide: false
-  button: true
+  button: false
   mobile: true # display on mobile
   position: right # left or right
   display:
-    archive: true
-    tag: true
-    category: true
+    archive: false
+    tag: false
+    category: false
   card_author:
     enable: true
     description:
     button:
-      enable: true
+      enable: false
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/linganmin
@@ -678,7 +526,7 @@ aside:
     color: false
     sort_order: # Don't modify the setting unless you know how it works
   card_archives:
-    enable: true
+    enable: false
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -700,8 +548,8 @@ busuanzi:
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
-  publish_date:
+  enable: true
+  publish_date: 01/01/2019 00:00:00
 
 # Aside widget - Newest Comments
 newest_comments:
@@ -793,30 +641,6 @@ note:
 
 # other
 # --------------------------------------
-
-# Pjax
-# It may contain bugs and unstable, give feedback when you find the bugs.
-# https://github.com/MoOx/pjax
-pjax:
-  enable: false
-  exclude:
-    # - xxxx
-    # - xxxx
-
-# Inject the css and script (aplayer/meting)
-aplayerInject:
-  enable: false
-  per_page: true
-
-# Snackbar (Toast Notification 彈窗)
-# https://github.com/polonel/SnackBar
-# position 彈窗位置
-# 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
-snackbar:
-  enable: false
-  position: bottom-left
-  bg_light: '#49b1f5' # The background color of Toast Notification in light mode
-  bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
 
 # https://instant.page/
 # prefetch (預加載)
@@ -946,8 +770,3 @@ CDN:
     # artalk_js:
     # artalk_css:
 
-ICP:
-  enable: true
-  url: http://beian.miit.gov.cn/
-  text: 苏ICP备16006718号
-  icon: /img/icp.png
