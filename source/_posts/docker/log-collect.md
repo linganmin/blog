@@ -232,7 +232,7 @@ labels:
 你可以在自己应用容器上添加更多标签，参考官方文档[容器日志采集利器Log-Pilot
 ](https://developer.aliyun.com/article/674327)
 
-至此，便实现了使用 log-pilot + elk 搭建 docker stdout 日志解决方案
+至此，便实现了使用 log-pilot + elk 搭建 docker stdout 日志解决方案。
 
 ## 备注
 

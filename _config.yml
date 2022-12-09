@@ -105,6 +105,3 @@ deploy:
   - type: 'git'
     repo: git@github.com:linganmin/linganmin.github.io.git
     branch: master
-  - type: 'git'
-    repo: git@gitlab.com:linganmin/blog-pages.git
-    branch: master
