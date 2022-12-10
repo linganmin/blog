@@ -1,15 +1,15 @@
 ---
 title: 类微博/微信朋友圈 feed 流系统设计
 tags:
-  - 架构
-categories: Frchitecture
+  - Feed流
+categories: 系统架构
 keywords: 'blog,golang,php,framework,架构'
 description: 类微博/微信朋友圈 feed 流系统设计
 cover: >-
   https://graph.linganmin.cn/210410/1e1052bedd6dfa45b8c8626bec224ed2?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210410/1e1052bedd6dfa45b8c8626bec224ed2?x-oss-process=image/format,webp/quality,q_40
-abbrlink: feeds
+abbrlink: 330d259a
 date: 2021-04-07 07:30:20
 ---
 

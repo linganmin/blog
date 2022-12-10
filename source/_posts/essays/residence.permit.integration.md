@@ -1,7 +1,7 @@
 ---
 title: 上海居住证积分流程梳理
 tags:
-  - 一年又一年
+  - 上海
 categories: 随笔
 keywords: 'blog,上海,上海居住证,居住证积分'
 description: 因为一些其他原因最近在办上海居住证积分，顺便整理下流程，方便后续其他人查看
@@ -9,7 +9,7 @@ cover: >-
   https://graph.linganmin.cn/210602/bf37fd0bacd2349f2562b5290cb64bfc?x-oss-process=image/format,webp/quality,q_100
 top_img: >-
   https://graph.linganmin.cn/210602/bf37fd0bacd2349f2562b5290cb64bfc?x-oss-process=image/format,webp/quality,q_100
-abbrlink: residence-permit-integration
+abbrlink: 4211b8f6
 date: 2021-06-04 10:00:51
 ---
 

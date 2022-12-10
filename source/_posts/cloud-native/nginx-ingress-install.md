@@ -2,15 +2,15 @@
 title: Kubernetes 集群部署最新版 Ingress-Nginx
 tags:
   - Kubernetes
-  - Docker
-categories: Kubernetes
+  - Ingress
+categories: 云原生
 keywords: 'traefik,blog,golang,php,k8s,kubernetes,probe'
 description: Kubernetes 集群部署 Ingress-Nginx
 cover: >-
   https://graph.linganmin.cn/210922/88f2bb6a988224d79d9f6cdf1edce170?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210922/88f2bb6a988224d79d9f6cdf1edce170?x-oss-process=image/format,webp/quality,q_40
-abbrlink: nginx-ingress-install
+abbrlink: ec5acab6
 date: 2021-09-22 22:40:34
 ---
 

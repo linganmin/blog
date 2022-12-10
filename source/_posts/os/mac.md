@@ -1,15 +1,15 @@
 ---
 title: 新 Mac 软件安装
 tags:
-  - Mac
-categories: 硬件
+  - MacOS
+categories: 操作系统
 keywords: 'blog,mac'
 description: 新 Mac 常用软件安装
 cover: >-
   https://graph.linganmin.cn/200504/a2ba3fcf540a33577ebde34d3d0e5bab?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/200504/a2ba3fcf540a33577ebde34d3d0e5bab?x-oss-process=image/format,webp/quality,q_40
-abbrlink: mac
+abbrlink: 3c629974
 date: 2020-06-04 22:03:00
 ---
 

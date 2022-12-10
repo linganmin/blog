@@ -2,8 +2,9 @@
 title: Kubernetes 暴力入门(一)
 tags:
   - Kubernetes
-  - Docker
-categories: Kubernetes
+  - POD
+  - Deployment
+categories: 云原生
 keywords: 'Kubernetes,K8S,docker'
 description: 学习 Kubernetes 的总结第一篇
 cover: >-
@@ -146,3 +147,40 @@ Label 是 K8S 系统中一个重要的概念，Label 以键值对(key/value)的�
 ### Service
 
 > TODO
+
+## 架构图
+
+![架构图](https://graph.linganmin.cn/210403/902edee9c3af4fc63804dc26d586499f?x-oss-process=image/format,webp/quality,q_60)
+
+## 核心组件
+
+- API Server
+
+  - 用户唯一可以直接进行交互的 k8s 组件
+  - 提供了认证、授权、访问控制、api 注册和发现等机制
+
+- ETCD
+
+  - 集群数据库
+  - 存储了整个集群的配置和状态
+
+- Controller Manager
+
+  - 负责维护集群的状态，比如故障检测、自动扩展、滚动更新等
+
+- Scheduler
+
+  - 负责资源的调度。按照预定的调度策略将 pod 调度到相应机器上
+
+- Kubelet
+
+  - 负责维护容器的生命周期、同时也负责 Volume(CSI)和网络(CNI)的管理
+
+- Container Runtime
+
+  - 负责镜像管理以及 pod 和容器的真正运行 (CRI)
+
+- Kube-Proxy
+
+  - 负责为 service 提供 cluster 内部的服务发现和负载均衡
+

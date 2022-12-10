@@ -3,15 +3,15 @@ title: 使用 Opentracing 实现 Golang 链路追踪
 tags:
   - Golang
   - Opentracing
-  - Jeager
-categories: Golang
+  - 链路追踪
+categories: 好好学习
 keywords: 'blog,golang,opentracing,jeager'
 description: 了解 Opentracing（分布式链路追踪）并尝试在 Golang 中使用
 cover: >-
   https://graph.linganmin.cn/220217/66b241b8bb939fb3fbac1dc2956f3114?x-oss-process=image/format,webp/quality,q_60
 top_img: >-
   https://graph.linganmin.cn/220217/66b241b8bb939fb3fbac1dc2956f3114?x-oss-process=image/format,webp/quality,q_60
-abbrlink: opentracing
+abbrlink: '342e7622'
 date: 2022-02-17 22:40:34
 ---
 

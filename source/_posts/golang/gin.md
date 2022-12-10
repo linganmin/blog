@@ -1,15 +1,17 @@
 ---
-title: 浅读 Go 优秀开源项目源码— Gin框架
+title: 浅读 Go 优秀开源项目源码—Gin框架
 tags:
-  - Gin
-categories: Golang
+  - Gin框架
+  - Golang
+  - 源码
+categories: 好好学习
 keywords: 'blog,golang,gin'
 description: 浅读 Gin 框架源码，学习优秀项目的设计
 cover: >-
   https://graph.linganmin.cn/220306/e6d48282ac21a3cc02dd7b6a2b571e81?x-oss-process=image/format,webp/quality,q_60
 top_img: >-
   https://graph.linganmin.cn/220306/e6d48282ac21a3cc02dd7b6a2b571e81?x-oss-process=image/format,webp/quality,q_60
-abbrlink: gin
+abbrlink: d6715893
 date: 2022-03-06 22:30:20
 ---
 
@@ -151,29 +153,28 @@ func (n *node) addRoute(path string, handlers HandlersChain) {
 ```Go
 // Use adds middleware to the group, see example code in GitHub.
 func (group *RouterGroup) Use(middleware ...HandlerFunc) IRoutes {
-	group.Handlers = append(group.Handlers, middleware...)
-	return group.returnObj()
+  group.Handlers = append(group.Handlers, middleware...)
+  return group.returnObj()
 }
 
 func (group *RouterGroup) handle(httpMethod, relativePath string, handlers HandlersChain) IRoutes {
-	absolutePath := group.calculateAbsolutePath(relativePath)
-	handlers = group.combineHandlers(handlers) // 将处理请求的函数与中间件结合
-	group.engine.addRoute(httpMethod, absolutePath, handlers)
-	return group.returnObj()
+  absolutePath := group.calculateAbsolutePath(relativePath)
+  handlers = group.combineHandlers(handlers) // 将处理请求的函数与中间件结合
+  group.engine.addRoute(httpMethod, absolutePath, handlers)
+  return group.returnObj()
 }
 
 func (group *RouterGroup) combineHandlers(handlers HandlersChain) HandlersChain {
-	finalSize := len(group.Handlers) + len(handlers)
-	if finalSize >= int(abortIndex) {
-		panic("too many handlers")
-	}
-	mergedHandlers := make(HandlersChain, finalSize)
-	copy(mergedHandlers, group.Handlers)
-	copy(mergedHandlers[len(group.Handlers):], handlers)
-	return mergedHandlers
+  finalSize := len(group.Handlers) + len(handlers)
+  if finalSize >= int(abortIndex) {
+    panic("too many handlers")
+  }
+  mergedHandlers := make(HandlersChain, finalSize)
+  copy(mergedHandlers, group.Handlers)
+  copy(mergedHandlers[len(group.Handlers):], handlers)
+  return mergedHandlers
 }
 ```
-
 
 中间件和处理请求的函数合并成一个 slice（handlersChain）,遍历该链条，依次执行该路由的每一个函数，可以在中间件中 使用 c.Next() 实现嵌套调用。
 

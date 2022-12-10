@@ -2,14 +2,14 @@
 title: Golang 知识点梳理
 tags:
   - Golang
-categories: Golang
+categories: 好好学习
 keywords: 'blog,golang,php'
 description: 学习 Golang 的知识点梳理
 cover: >-
   https://graph.linganmin.cn/200822/43c6bc33f3be83618d4f9cc69bf00fb0?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/200822/43c6bc33f3be83618d4f9cc69bf00fb0?x-oss-process=image/format,webp/quality,q_40
-abbrlink: golang_knowledge
+abbrlink: d90f8fc7
 date: 2020-03-10 12:40:34
 ---
 

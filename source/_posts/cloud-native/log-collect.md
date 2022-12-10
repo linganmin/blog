@@ -1,13 +1,15 @@
 ---
 title: 使用 log-pilot + elk 搭建 docker stdout 日志解决方案
 tags:
-	- Docker
-categories: Kubernetes
+  - Docker
+  - DockerCompose
+  - 日志收集
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: 使用 log-pilot + elk 搭建 docker stdout 日志解决方案
 cover: >-
-    https://graph.linganmin.cn/211107/bf81612871634692c7c423dcc5aef292?x-oss-process=image/format,webp/quality,q_60
-abbrlink: 13167fc8
+  https://graph.linganmin.cn/211107/bf81612871634692c7c423dcc5aef292?x-oss-process=image/format,webp/quality,q_60
+abbrlink: c1dd7ead
 date: 2022-08-08 22:40:34
 ---
 

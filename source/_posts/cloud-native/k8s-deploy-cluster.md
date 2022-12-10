@@ -1,16 +1,15 @@
 ---
 title: 使用 Kubeadm 部署 Kubernetes 集群
 tags:
-	- Docker
   - Kubernetes
-categories: Kubernetes
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: 记录使用 kubeadm 部署一套 k8s 集群
 cover: >-
   https://graph.linganmin.cn/200911/4043741d339ab2812a46836518975aa7?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/200911/4043741d339ab2812a46836518975aa7?x-oss-process=image/format,webp/quality,q_40
-abbrlink: k8s-cluster
+abbrlink: a145cb7
 date: 2021-03-27 03:40:34
 ---
 

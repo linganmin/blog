@@ -1,7 +1,7 @@
 ---
 title: 一线城市生活现状-上海
 tags:
-  - 碎碎念
+  - 上海
 categories: 随笔
 keywords: 'blog,diary,上海,一线'
 description: 总结一下自己在”魔都“这三年多生活的日常吧，平淡、拥挤、好像又充满希望和失落。

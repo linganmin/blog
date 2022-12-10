@@ -2,15 +2,15 @@
 title: 使用 Helm 在 Kubernetes 集群安装最新版 Traefik
 tags:
   - Kubernetes
-  - Docker
-categories: Kubernetes
+  - Helm
+categories: 云原生
 keywords: 'traefik,blog,golang,php,k8s,kubernetes,probe'
 description: 使用 Helm 在 Kubernetes 集群安装最新版 Traefik 作反向代理和负载均衡器
 cover: >-
   https://graph.linganmin.cn/210921/4ae58f0d7d8d8a33e91b55adb822dbdb?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210921/4ae58f0d7d8d8a33e91b55adb822dbdb?x-oss-process=image/format,webp/quality,q_40
-abbrlink: traefik-install
+abbrlink: 2d15ed93
 date: 2021-09-21 00:40:34
 ---
 

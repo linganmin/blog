@@ -3,14 +3,14 @@ title: 基于 Consul 实现 gRPC 服务注册与发现
 tags:
   - 中间件
   - Consul
-categories: Middleware
+categories: 系统架构
 keywords: 'blog,golang,consul,etcd'
 description: 学习 Consul 基础知识，并基于 Consul 实现 gRPC 服务注册发现。
 cover: >-
   https://graph.linganmin.cn/220219/f7972adc36f4c23da00f92f05b0b6be7?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/220219/f7972adc36f4c23da00f92f05b0b6be7?x-oss-process=image/format,webp/quality,q_60
-abbrlink: consul
+abbrlink: 5dc89f0f
 date: 2022-02-19 03:30:20
 ---
 

@@ -1,16 +1,16 @@
 ---
 title: Kafka 知识梳理
 tags:
-  - MQ
+  - Kafka
   - 中间件
-categories: Middleware
+categories: 消息队列
 keywords: 'blog,golang,php,framework,架构,kafka,卡夫卡，MQ'
 description: Kafka 知识梳理
 cover: >-
   https://graph.linganmin.cn/210418/1ff08ddea3bcd783bd398cfa51aef556?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210418/1ff08ddea3bcd783bd398cfa51aef556?x-oss-process=image/format,webp/quality,q_40
-abbrlink: kafka
+abbrlink: bc68ea96
 date: 2021-04-18 07:30:20
 ---
 

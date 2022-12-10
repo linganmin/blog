@@ -2,15 +2,15 @@
 title: Kubeadm 安装 Kubernetes V1.22.2 踩坑手记
 tags:
   - Kubernetes
-  - Docker
-categories: Kubernetes
+  - Kubeadm
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: Kubeadm 安装 Kubernetes V1.22.2 踩坑手记，使用 Docker 作 Container Runtime
 cover: >-
   https://graph.linganmin.cn/210919/4e6c850efdc628e06f037a82d5d7b185?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210919/4e6c850efdc628e06f037a82d5d7b185?x-oss-process=image/format,webp/quality,q_40
-abbrlink: k8s-install-note
+abbrlink: e589412a
 date: 2021-09-20 00:40:34
 ---
 

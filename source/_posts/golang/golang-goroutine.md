@@ -2,14 +2,15 @@
 title: 「深入学习 Golang」之 Goroutine
 tags:
   - Golang
-categories: Golang
+  - Goroutine
+categories: 好好学习
 keywords: 'blog,golang,php,闵令安'
 description: 一些 golang 的重点和难点
 cover: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_40
-abbrlink: golang-goroutine
+abbrlink: 3810a6eb
 date: 2020-09-15 06:40:34
 ---
 

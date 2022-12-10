@@ -1,15 +1,16 @@
 ---
 title: Redis 知识梳理
 tags:
-  - Cache
-categories: Frchitecture
+  - Redis
+  - 中间件
+categories: 数据库
 keywords: 'blog,golang,php,framework,架构,缓存,redis'
 description: Redis 知识梳理
 cover: >-
   https://graph.linganmin.cn/210501/f9d5bf728f79544fde5f1e7afe4c0d91?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210501/f9d5bf728f79544fde5f1e7afe4c0d91?x-oss-process=image/format,webp/quality,q_60
-abbrlink: redis
+abbrlink: b13ae59f
 date: 2021-04-21 07:30:20
 ---
 

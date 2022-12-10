@@ -1,7 +1,7 @@
 ---
 title: 2020.05.01 去「枸杞岛」养生啦
 tags:
-  - 旅行
+  - 枸杞岛
 categories: 旅行
 keywords: '旅行,枸杞岛,舟山'
 description: 春暖花开，一起去养(枸)生(杞)岛散心呀。
@@ -9,7 +9,7 @@ cover: >-
   https://graph.linganmin.cn/200503/14c2610b74261963deb4301ff5225c7a?x-oss-process=image/format,webp/quality,q_3
 top_img: >-
   https://graph.linganmin.cn/200503/14c2610b74261963deb4301ff5225c7a?x-oss-process=image/format,webp/quality,q_5
-abbrlink: gouqidao
+abbrlink: ae3ae3ff
 date: 2020-04-12 15:06:34
 ---
 

@@ -1,16 +1,16 @@
 ---
 title: 「在一个内卷的时代，我们该如何谈论幸福」课堂笔记
 tags:
-  - 读万卷书
-categories: 读书
-keywords: '心流，内卷，幸福'
+  - 万卷书
+categories: 读书笔记
+keywords: 心流，内卷，幸福
 description: 「在一个内卷的时代，我们该如何谈论幸福」课堂笔记
 cover: >-
   https://graph.linganmin.cn/210923/af9c4e0ac4793f542a6f50220a229be1?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210923/af9c4e0ac4793f542a6f50220a229be1?x-oss-process=image/format,webp/quality,q_50
-abbrlink: involution-felicity
-date: 2021-09-23 22:03:51
+abbrlink: f38f5faa
+date: 2021-12-20 22:03:51
 ---
 
 整堂课的“题”，老师整体上是基于罗曼罗兰的这句话展开的：

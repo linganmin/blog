@@ -2,14 +2,15 @@
 title: 「深入学习 Golang」之 GPM
 tags:
   - Golang
-categories: Golang
+  - GMP
+categories: 好好学习
 keywords: 'blog,golang,php'
 description: 一些 golang 的重点和难点
 cover: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_40
-abbrlink: golang-gpm
+abbrlink: 943537f7
 date: 2020-10-03 15:40:34
 ---
 

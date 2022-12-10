@@ -2,14 +2,14 @@
 title: 「深入学习 Golang」之 切片（slice）、数组（array）
 tags:
   - Golang
-categories: Golang
+categories: 好好学习
 keywords: 'blog,golang,php'
 description: golang 切片（slice）和数组（array）
 cover: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_40
-abbrlink: golang-basic
+abbrlink: 1a41abc9
 date: 2020-10-07 05:30:20
 ---
 

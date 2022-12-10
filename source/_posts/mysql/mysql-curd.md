@@ -2,15 +2,14 @@
 title: 「MySQL 拾遗」之 增删查改
 tags:
   - MySQL
-	- 拾遗
-categories: Database
-keywords: 'mysql'
+categories: 数据库
+keywords: mysql
 description: MySQL 基础知识，增删查改
 cover: >-
   https://graph.linganmin.cn/201007/f4579b44bb4078b0f0f9bcc986f56d73?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/201007/f4579b44bb4078b0f0f9bcc986f56d73?x-oss-process=image/format,webp/quality,q_40
-abbrlink: mysql-crud
+abbrlink: 7c5a053f
 date: 2020-07-07 22:03:00
 ---
 

@@ -1,13 +1,16 @@
 ---
 title: 使用 Fluentd + ElasticSearch 搭建 docker stdout 日志解决方案
 tags:
-	- Docker
-categories: Kubernetes
+  - Docker
+  - DockerCompose
+  - Fluent
+  - 日志收集
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: 使用 Fluentd + ElasticSearch 搭建 docker stdout 日志解决方案
 cover: >-
-    https://graph.linganmin.cn/220918/09a22a20c3b33f091ac17d50dba2e259?x-oss-process=image/format,webp/quality,q_60
-abbrlink: efk
+  https://graph.linganmin.cn/220918/09a22a20c3b33f091ac17d50dba2e259?x-oss-process=image/format,webp/quality,q_60
+abbrlink: e11179c6
 date: 2022-12-08 22:40:34
 ---
 

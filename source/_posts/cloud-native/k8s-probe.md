@@ -2,16 +2,15 @@
 title: 「Kubernetes 拾遗」之 Probe（探针）
 tags:
   - Kubernetes
-  - Docker
-	- 拾遗
-categories: Kubernetes
+  - K8S探针
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: Kubernetes ( k8s ) 存活检查 ( livenessProbe ) 与 就绪检查 ( readinessProbe )
 cover: >-
   https://graph.linganmin.cn/200823/cedb311450bb165121fd1f1a6d49fa13?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/200823/cedb311450bb165121fd1f1a6d49fa13?x-oss-process=image/format,webp/quality,q_40
-abbrlink: k8s-probe
+abbrlink: 8983aea6
 date: 2020-08-10 22:40:34
 ---
 

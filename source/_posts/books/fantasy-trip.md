@@ -1,16 +1,16 @@
 ---
 title: 「牧羊少年奇幻之旅」读书笔记
 tags:
-  - 读万卷书
-categories: 读书
-keywords: '牧羊少年奇幻之旅，读书笔记'
+  - 万卷书
+categories: 读书笔记
+keywords: 牧羊少年奇幻之旅，读书笔记
 description: 读《牧羊少年奇幻之旅》的一些笔记和思考
 cover: >-
   https://graph.linganmin.cn/210228/cef6fc9fa9893597c907e7a03410ccb5?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/210228/cef6fc9fa9893597c907e7a03410ccb5?x-oss-process=image/format,webp/quality,q_50
-abbrlink: fantasy-trip
-date: 2021-02-30 22:03:51
+abbrlink: 95efbe0f
+date: 2021-03-02 22:03:51
 ---
 
 > 读书是一遍遍的走向未来，又一遍遍的回到过去。-- @吴伯凡

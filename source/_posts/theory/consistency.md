@@ -2,14 +2,14 @@
 title: 分布式架构中的”一致性“
 tags:
   - 分布式
-categories: Frchitecture
+categories: 好好学习
 keywords: 'blog,golang,php,framework,架构'
 description: 分布式架构中的”一致性“
 cover: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_40
-abbrlink: consistency
+abbrlink: 31cade2d
 date: 2021-01-07 07:30:20
 ---
 

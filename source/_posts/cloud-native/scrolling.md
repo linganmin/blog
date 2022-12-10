@@ -1,11 +1,13 @@
 ---
 title: 使用 Docker Compose 实现滚动更新部署
 tags:
-	- Docker
-categories: Kubernetes
+  - Docker
+  - DokerCompose
+  - 滚动更新
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: 使用 Docker Compose 实现滚动更新部署
-abbrlink: f191df1c
+abbrlink: 9a11c27c
 date: 2022-09-09 22:40:34
 ---
 

@@ -2,14 +2,14 @@
 title: （手机/相机）摄影方法论
 tags:
   - 摄影
-categories: 读书
+categories: 读书笔记
 keywords: '摄影,photography'
 description: 学习摄影课程的一些方法论笔记
 cover: >-
   https://graph.linganmin.cn/210129/ff3ec3dfff84ce639b936d487e8dba6f?x-oss-process=image/format,webp/quality,q_100
 top_img: >-
   https://graph.linganmin.cn/210129/ff3ec3dfff84ce639b936d487e8dba6f?x-oss-process=image/format,webp/quality,q_100
-abbrlink: photography
+abbrlink: d19db3c7
 date: 2021-01-29 22:03:00
 ---
 

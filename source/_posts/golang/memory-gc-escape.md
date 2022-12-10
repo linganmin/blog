@@ -2,14 +2,15 @@
 title: 浅析 Golang 内存机制（内存分配、GC、内存逃逸）
 tags:
   - Golang
-categories: Golang
+  - GC
+categories: 好好学习
 keywords: 'blog,golang,gin'
 description: 浅析 Golang 内存机制，包括内存分配，内存垃圾回收已经内存逃逸分析
 cover: >-
   https://graph.linganmin.cn/220308/d4ae2041db5705ff090a064e92e12d78?x-oss-process=image/format,webp/quality,q_60
 top_img: >-
   https://graph.linganmin.cn/220308/d4ae2041db5705ff090a064e92e12d78?x-oss-process=image/format,webp/quality,q_60
-abbrlink: golang-memory
+abbrlink: 3825abf1
 date: 2022-03-08 22:30:20
 ---
 

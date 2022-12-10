@@ -2,14 +2,15 @@
 title: 「深入学习 Golang」之 Channel
 tags:
   - Golang
-categories: Golang
+  - Channel
+categories: 好好学习
 keywords: 'blog,golang,php'
 description: golang 的 Channel
 cover: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/201007/87122d3084205a5821b1e39413e84349?x-oss-process=image/format,webp/quality,q_40
-abbrlink: golang-channel
+abbrlink: 93eb20a1
 date: 2020-08-07 05:30:20
 ---
 

@@ -2,15 +2,19 @@
 title: 搭建基于 Kubernetes 生产可用的日志和监控系统
 tags:
   - Kubernetes
-  - Docker
-categories: Kubernetes
+  - Fluent
+  - 日志收集
+  - Traefik
+  - Prometheus
+  - Grafana 
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: 搭建基于 Kubernetes 生产可用的日志和监控系统
 cover: >-
   https://graph.linganmin.cn/220529/b208e0a803bbec39eab9007b774f2d92?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
- https://graph.linganmin.cn/220529/b208e0a803bbec39eab9007b774f2d92?x-oss-process=image/format,webp/quality,q_40
-abbrlink: k8s-sys
+  https://graph.linganmin.cn/220529/b208e0a803bbec39eab9007b774f2d92?x-oss-process=image/format,webp/quality,q_40
+abbrlink: 4679c257
 date: 2022-05-29 22:40:34
 ---
 

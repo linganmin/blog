@@ -1,17 +1,15 @@
 ---
 title: 「Kubernetes 拾遗」之 输入 kubectl run/create/apply 之后到底发生了什么
 tags:
-	- Kubernetes
-	- Docker
-	- 拾遗
-categories: Kubernetes
+  - Kubernetes
+categories: 云原生
 keywords: 'blog,golang,php,k8s,kubernetes,probe'
 description: 输入 kubectl run/create/apply 之后到底发生了什么？
 cover: >-
   https://graph.linganmin.cn/200911/4043741d339ab2812a46836518975aa7?x-oss-process=image/format,webp/quality,q_10
 top_img: >-
   https://graph.linganmin.cn/200911/4043741d339ab2812a46836518975aa7?x-oss-process=image/format,webp/quality,q_40
-abbrlink: k8s-execution-flow
+abbrlink: f902dddb
 date: 2020-09-11 22:40:34
 ---
 
