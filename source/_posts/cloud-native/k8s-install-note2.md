@@ -308,7 +308,8 @@ advertiseAddress: 1.2.3.4 # 修改为自己的 master 节点 IP
 name: master # 修改为 master
 imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers  # 因为网络问题拉去不到官方镜像，修改为阿里云镜像地址
 kubernetesVersion: 1.25.3 #确认是否为要安装版本，版本根据执行：kubelet --version 得来
-podSubnet: 172.17.0.0/16　　　# networking: 下添加 pod 网段，注意该网段不能和主机在同一网段下
+podSubnet: 10.16.0.0/12　　　# networking: 下添加 pod 网段，注意该网段不能和主机在同一网段下
+serviceSubnet: 10.96.0.0/12 # 修改 Service 网段
 
 ---
 #  添加 proxy 模式使用 ipvs
@@ -316,11 +317,6 @@ apiVersion: kubeproxy.config.k8s.io/v1alpha1
 kind: KubeProxyConfiguration
 mode: ipvs
  
-# ---
-# # cgroupDriver: systemd 新版本已默认，不需要指定
-# apiVersion: kubelet.config.k8s.io/v1beta1
-# kind: KubeletConfiguration
-# cgroupDriver: systemd
 ```
 
 ### 初始化集群
@@ -360,11 +356,51 @@ node     NotReady   <none>          10s    v1.25.3
 
 ## 安装网络插件
 
- 可以看到是 NotReady 状态，这是因为还没有安装网络插件，必须部署一个容器网络接口 (CNI) 基于 Pod 网络附加组件，以便您的 Pod 可以相互通信。在安装网络之前，集群 DNS (CoreDNS) 不会启动。接下来安装网络插件，可以在以下两个任一地址中选择需要安装的网络插件(我选用的第二个地址安装)，这里我们安装 calico；
-
-下载calico 资源清单文件
+ 可以看到是``状态，这是因为还没有安装网络插件，必须部署一个容器网络接口 `(CNI)` 基于`Pod`网络附加组件，以便您的`Pod`可以相互通信。在安装网络之前，集群`DNS (CoreDNS)` 不会启动，这里我们安装`calico`，[calico文档](https://projectcalico.docs.tigera.io/about/about-calico)
 
 ```bash
+# 下载calico 资源清单文件
 wget https://projectcalico.docs.tigera.io/archive/v3.25/manifests/calico.yaml
+
+# 安装
+kubectl apply -f calico.yaml
+
+# 查看 POD 运行状态
+kubectl get pods -n kube-system
+# NAME                                       READY   STATUS    RESTARTS   AGE
+# calico-kube-controllers-74677b4c5f-tg9cm   1/1     Running   0          107s
+# calico-node-8z52z                          1/1     Running   0          107s
+# calico-node-wk8ww                          1/1     Running   0          107s
+# coredns-7f8cbcb969-pnckr                   1/1     Running   0          10m
+# coredns-7f8cbcb969-pqhkk                   1/1     Running   0          10m
+# etcd-master                                1/1     Running   2          10m
+# kube-apiserver-master                      1/1     Running   2          10m
+# kube-controller-manager-master             1/1     Running   0          10m
+# kube-proxy-7zx75                           1/1     Running   0          9m48s
+# kube-proxy-f82rl                           1/1     Running   0          10m
+# kube-scheduler-master                      1/1     Running   6          10m
+
+```
+
+至此`Kubernetes`安装完成。
+
+## 部署一个 Deployment 资源
+
+```bash
+
+# 创建一个名叫 nginx 的 deployment pod 副本数为3
+kubectl create deployment nginx --image=nginx:latest -r=3
+
+# 查看容器状态
+kubectl get pods
+# NAME                     READY   STATUS    RESTARTS   AGE
+# nginx-6d666844f6-hrlxv   1/1     Running   0          106s
+# nginx-6d666844f6-n5tjz   1/1     Running   0          106s
+# nginx-6d666844f6-t7865   1/1     Running   0          106s
+
+# 查看 deployment
+kubectl get deploy
+# NAME    READY   UP-TO-DATE   AVAILABLE   AGE
+# nginx   3/3     3            3           2m42s
 
 ```
