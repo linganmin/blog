@@ -25,7 +25,11 @@ CRI(Container Runtime Interface)是`Kubernetes`定义的接口，定义了如何
 
 #### Containerd
 
-Containerd 脱胎于`Docker`的高级容器运行时。它实现了`CRI`规范。它从镜像仓库中拉取镜像、管理它们，然后交给较低级别的运行时（`runc`），它使用`Linux`内核的特性来创建我们称为“容器”的进程。
+`containerd`是一个来自`Docker`的高级容器运行时，并实现了`CRI`规范。它是从`Docker`项目中分离出来，之后`containerd`被捐赠给云原生计算基金会（CNCF）为容器社区提供创建新容器解决方案的基础。
+
+所以`Docker`自己在内部使用`containerd`，当你安装`Docker`时也会安装`containerd`.
+
+`containerd`通过其`CRI`插件实现了`Kubernetes`容器运行时接口（`CRI`），它可以管理容器的整个生命周期，包括从镜像的传输、存储到容器的执行、监控再到网络。
 
 #### OCI
 
