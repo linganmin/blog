@@ -308,7 +308,7 @@ crictl config runtime-endpoint /run/containerd/containerd.sock
 
 #### 配置 kubelet 的 cgroup
 
-`kubeadm`支持在执行`kubeadm init`时，传递一个`KubeletConfiguration`结构体。`KubeletConfiguration`包含`cgroupDriver`字段，可用于控制`kubelet`的`kubelet`驱动。
+`kubeadm`支持在执行`kubeadm init`时，传递一个`KubeletConfiguration`结构体。`KubeletConfiguration`包含`cgroupDriver`字段，可用于控制`kubelet`的`cgroup`驱动。
 
 ***在`kubeadm`1.22版本后，如果没有在`KubeletConfiguration`中设置`cgroupDriver`，`kubeadm`会将其默认设置为`systemd`***
 
