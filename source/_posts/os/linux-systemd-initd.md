@@ -20,4 +20,4 @@ Init（也被称为`System V init`或者`SysVinit`），它是一个初始化守
 
 ## 什么是 Systemd
 
-`Systemd(system daemon)`是现代系统使用的`init`守护进程，它并行的启动系统服务，从而消除不必要的延迟并加快初始化进程。`systemd`通过使用`Unit Dependencies`来定义一个服务是否想要/需要依赖其他服务才能运行，使用`Unit Order`来定义一个服务是否需要在它之前/之后启动。可以使用`systemctl`进行对`systemd service`的管理。
+`Systemd(system daemon)`是现代系统使用的`init`守护进程，它并行的启动系统服务，从而消除不必要的延迟并加快初始化进程。`systemd`通过使用`Unit Dependencies`来定义一个服务是否想要/需要依赖其他服务才能运行，使用`Unit Order`来定义一个服务是否需要在它之前/之后启动。可以使用`systemctl`进行对`system service`的管理。
