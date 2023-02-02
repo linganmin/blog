@@ -15,11 +15,17 @@ abbrlink: c62b22dc
 
 ## 基础知识
 
-### CRI 与 Containerd
+### CRI、OCI、Containerd、runc
 
-todo
+> CRI(Container Runtime Interface)是`Kubernetes`定义的接口，定义了如何操作容器和镜像的统一规范。Kubernetes 尽量不关心您使用哪个容器运行时。 它只需要能够向它发送指令——为`Pod`创建容器、终止它们等等。 这就是`CRI`的用武之地。`CRI` 是对现在或将来可能存在的任何类型的容器运行时的抽象。 所以 `CRI` 让 Kubernetes 更容易使用不同的容器运行时。 `CRI` API描述了`Kubernetes`如何与任何运行时交互，而不是`Kubernetes`项目需要单独添加对每个运行时的支持。 只要给定的容器运行时实现了`CRI` API，运行时就可以随心所欲地创建和启动容器。
 
-crictl
+![You can choose your own container runtime for Kubernetes](https://graph.linganmin.cn/230201/ea90a93e75b45ff4dde97f1a4d96fdca?x-oss-process=image/format,webp/quality,q_60)
+
+> containerd 脱胎于`Docker`的高级容器运行时。 它实现了`CRI`规范。它从镜像仓库中拉取镜像、管理它们，然后交给较低级别的运行时（`runc`），它使用`Linux`内核的特性来创建我们称为“容器”的进程。
+
+> runc 为容器提供所有低级功能，与现有的低级 Linux 功能交互，如命名空间和控制组。 它使用这些功能来创建和运行容器进程。
+
+![The relationship between Docker, CRI-O, containerd and runc – in a nutshell](https://graph.linganmin.cn/230201/e886b156ff4803fc27a44b382ee0fb1d?x-oss-process=image/format,webp/quality,q_60)
 
 ### ipvs
 
@@ -224,9 +230,18 @@ yum install -y containerd.io
 # 创建目录
 mkdir -p /etc/containerd
 containerd config default > /etc/containerd/config.toml
-# 替换配置文件
-sed -i 's#SystemdCgroup = false#SystemdCgroup = true#' /etc/containerd/config.toml
+# 替换配置文件的国内镜像
 sed -i 's#sandbox_image = "registry.k8s.io/pause:3.6"#sandbox_image = "registry.aliyuncs.com/google_containers/pause:3.6"#' /etc/containerd/config.toml
+```
+
+对于使用`systemd`作为`init system`的`Linux`发行版，使用`systemd`作为容器的`cgroup driver`可以确保节点在资源紧张的情况更加稳定，所以推荐将`containerd`的`cgroup driver`配置为`systemd`。
+
+修改前面生成的配置文件`/etc/containerd/config.toml`，在`plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options`配置块下面将`SystemdCgroup`设置为`true`
+
+```bash
+
+sed -i 's#SystemdCgroup = false#SystemdCgroup = true#' /etc/containerd/config.toml
+
 ```
 
 #### 启动 containerd
