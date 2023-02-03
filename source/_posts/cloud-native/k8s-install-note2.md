@@ -403,7 +403,7 @@ node     NotReady   <none>          10s    v1.25.3
 
 ## 安装网络插件
 
- 可以看到是``状态，这是因为还没有安装网络插件，必须部署一个容器网络接口 `(CNI)` 基于`Pod`网络附加组件，以便您的`Pod`可以相互通信。在安装网络之前，集群`DNS (CoreDNS)` 不会启动，这里我们安装`calico`，[calico文档](https://projectcalico.docs.tigera.io/about/about-calico)
+ 可以看到是`NotReady`状态，这是因为还没有安装网络插件，必须部署一个容器网络接口 `(CNI)` 基于`Pod`网络附加组件，以便您的`Pod`可以相互通信。在安装网络之前，集群`DNS (CoreDNS)` 不会启动，这里我们安装`calico`，[calico文档](https://projectcalico.docs.tigera.io/about/about-calico)
 
 ```bash
 # 下载calico 资源清单文件
