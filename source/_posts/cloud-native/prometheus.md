@@ -1,5 +1,5 @@
 ---
-title: kube-prometheus-stack Usage
+title: kube-prometheus-stack usage
 tags:
   - Kubernetes
   - Prometheus
@@ -141,7 +141,7 @@ abbrlink: 57dfec22
             instance: demo
   ```
 
-详情参考官方文档[Prometheusg 官方文档](https://prometheus.io/docs/prometheus/latest/getting_started/)
+> 详情参考[Prometheusg 官方文档](https://prometheus.io/docs/prometheus/latest/getting_started/)
 
 ## Grafana Usage
 
@@ -162,11 +162,11 @@ abbrlink: 57dfec22
 - 监控自己的指标
   - 添加一个面板
   
-  ![pannel](https://graph.linganmin.cn/230501/45f46be8315d73acb9db1322cc639c9d?x-oss-process=image/format,webp/quality,q_60)
+    ![pannel](https://graph.linganmin.cn/230501/45f46be8315d73acb9db1322cc639c9d?x-oss-process=image/format,webp/quality,q_60)
 
   - 写 promQL
 
     ![promQL](https://graph.linganmin.cn/230501/a70a6fc907183105b8f247267765900d?x-oss-process=image/format,webp/quality,q_60)
 
 
-> 详细参考官方文档[Gafana官方文档](https://grafana.com/docs/grafana/latest/dashboards/use-dashboards/)
+> 详细参考[Gafana官方文档](https://grafana.com/docs/grafana/latest/dashboards/use-dashboards/)
