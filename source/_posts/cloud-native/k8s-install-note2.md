@@ -350,19 +350,43 @@ kubeadm config print init-defaults > kubeadm.yaml
 以下仅列出修改的点
 
 ```yaml
-
+# bootstrapTokens 下修改项
 advertiseAddress: 1.2.3.4 # 修改为自己的 master 节点 IP
 name: master # 修改为 master
-imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers  # 因为网络问题拉去不到官方镜像，修改为阿里云镜像地址
+
+# apiServer 下修改项
+apiServer:
+  timeoutForControlPlane: 4m0s
+apiVersion: kubeadm.k8s.io/v1beta3
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controllerManager:
+  extraArgs:
+    bind-address: 0.0.0.0 # Prometheus 采集 metrics 要用
+
+dns: {}
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+    extraArgs:
+      listen-metrics-urls: http://0.0.0.0:2381 # Prometheus 采集 metrics 要用
+imageRepository: registry.cn-hangzhou.aliyuncs.com/google_containers # 因为网络问题拉取不到官方镜像，修改为阿里云镜像地址
+kind: ClusterConfiguration
 kubernetesVersion: 1.25.3 #确认是否为要安装版本，版本根据执行：kubelet --version 得来
-podSubnet: 10.16.0.0/12　　　# networking: 下添加 pod 网段，注意该网段不能和主机在同一网段下
-serviceSubnet: 10.96.0.0/12 # 修改 Service 网段
+networking:
+  dnsDomain: cluster.local
+  podSubnet: 10.16.0.0/12 　#  下添加 pod 网段，注意该网段不能和主机在同一网段下
+  serviceSubnet: 10.96.0.0/12
+scheduler:
+  extraArgs:
+    bind-address: 0.0.0.0 # Prometheus 采集 metrics 要用
 
 ---
 #  添加 proxy 模式使用 ipvs
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
 kind: KubeProxyConfiguration
 mode: ipvs
+metricsBindAddress: 0.0.0.0:10249 # Prometheus 采集 metrics 要用
  
 ```
 
