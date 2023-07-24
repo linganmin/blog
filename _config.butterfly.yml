@@ -509,7 +509,7 @@ aside:
       link: https://github.com/linganmin
   card_announcement:
     enable: true
-    content: 来日方短、道阻且长；好好吃饭，好好睡觉、保重身体、好好生活，农历癸卯年快乐 ^_^
+    content: 来日方短、道阻且长；好好吃饭，好好睡觉、保重身体、好好生活，开心快乐 ^_^
   card_recent_post:
     enable: false
     limit: 5 # if set 0 will show all
