@@ -1,8 +1,8 @@
 ---
 title: 基于 cert-manage 对阿里云域名自动签发 TLS(https) 证书
 tags:
-  + Kubernetes
-  + TLS
+  - Kubernetes
+  - TLS
 categories: 云原生
 keywords: 'blog, golang, php, k8s, kubernetes, tls, https'
 description: cert-manager 是 Kubernetes 上的证书管理工具，可以从各种来源颁发证书，而且确保证书有效且最新，并尝试在到期前的配置时间续订证书。
