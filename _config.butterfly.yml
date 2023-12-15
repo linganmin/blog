@@ -200,7 +200,7 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://graph.linganmin.cn/200119/eed3e3ad8e1b81503989ef17fc2c5e7d?x-oss-process=image/format,webp/quality,q_60
+    - img: https://graph.linganmin.cn/231215/d0d6741198e276c5aac3299725e68e4a?x-oss-process=image/format,webp/quality,q_60
     #   link:
       text: 请我吃苹果
     # - img: /img/alipay.jpg

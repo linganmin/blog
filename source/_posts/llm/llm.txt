@@ -1,0 +1,85 @@
+---
+abbrlink: '0'
+---
+zero-shot chain of thought
+Zero-Shot是指直接给模型任务输入让它输出任务结果；Few-Shot是给模型提供一些示例，然后再给出任务，让它给出输出结果。
+
+“让我们一步一步地思考”（let’s think step by step），或“放声思考”（thinking aloud）
+
+
+对于 In-Context Learning(语境学习) 的验证，使用了三种不同的 condition：
+
+Few-Shot Learning：10-100 个样例（N=2048）作为上下文
+One-Shot Learning：一个样例
+Zero-Shot Learning：没有样例，只有一个自然语言指令（instruction）
+
+
+
+
+# Zero-Shot 来自openai官方文档
+prompt = """
+From the text below, extract the following entities in the following format:
+Companies: <comma-separated list of companies mentioned>
+People & titles: <comma-separated list of people mentioned (with their titles or roles appended in parentheses)>
+
+Text:
+In March 1981, United States v. AT&T came to trial under Assistant Attorney General William Baxter. AT&T chairman Charles L. Brown thought the company would be gutted. He realized that AT&T would lose and, in December 1981, resumed negotiations with the Justice Department. Reaching an agreement less than a month later, Brown agreed to divestiture—the best and only realistic alternative. AT&T's decision allowed it to retain its research and manufacturing arms. The decree, titled the Modification of Final Judgment, was an adjustment of the Consent Decree of 14 January 1956. Judge Harold H. Greene was given the authority over the modified decree....
+
+In 1982, the U.S. government announced that AT&T would cease to exist as a monopolistic entity. On 1 January 1984, it was split into seven smaller regional companies, Bell South, Bell Atlantic, NYNEX, American Information Technologies, Southwestern Bell, US West, and Pacific Telesis, to handle regional phone services in the U.S. AT&T retains control of its long distance services, but was no longer protected from competition.
+"""
+one-shot learning
+
+# Few-Shot
+prompt = """
+根据下面的格式抽取给定Text中的实体:
+和弦: <实体用逗号分割>
+
+
+Text:
+增三和弦是大三度+大三度的增五度音，减三和弦是小三度+小三度的减五度音。
+和弦：增三和弦,减三和弦
+
+Text:
+三和弦是由3个按照三度音程关系排列起来的一组音。大三和弦是大三度+小三度的纯五度音，小三和弦是小三度+大三度的纯五度音。
+"""
+
+Few-Shot，可以每次随机从数据集里抽几条出来作为Prompt的一部分。
+Fine-Tuning，把我们自己的数据集按指定格式准备好，提交给API，让它帮我们微调一个属于我们自己的模型，它在我们自己的数据集上学习过。
+  Few-Shot最关键的是如何找到这个「Few」，换句话说，我们拿什么Case给模型当做参考样本。对于类别比较多的多分类（实际工作中，成百上千中Label是很常见的），Few-Shot即使每个Label一个例子，这上下文长度也不得了。不太现实。这时候其实Few-Shot有点不太方便了。当然，如果我们非要用也不是不行，还是最常用的策略：先召回几个相似句，然后把相似句的内容和类别作为Few-Shot的例子，让接口来预测给定句子的类别。
+
+
+
+X-Shot在不同量级差别巨大，大模型就是有超能力。
+大模型下，One-Shot效果明显大幅度提升；增加Prompt会进一步大幅度提升。
+Few-Shot的边际收益在递减。大概8-Shot以下时，Prompt作用明显，但从One-Shot到8-Shot，Prompt的作用也在递减。超过10-Shot时，Prompt基本没作用了。
+
+
+
+Greedy Search（中文叫贪心搜索
+
+Beam Search（中文叫集束搜索）
+
+离散向量
+
+稀疏向量
+
+稠密向量
+
+GPT，Generative Pre-trained Transformer
+
+接下来出场的是Transformer，一个刚开始在NLP领域，后来横跨到语音和图像领域，并最终统一几乎所有模态的架构。这是Google2017年发的一篇论文，标题叫《Attention Is All You Need》，其最重要的核心就是提出来的Self-Attention机制，中文也叫自注意力。简单来说，就是在语言模型建模过程中，把注意力放在那些重要的Token上。想来，Google在发表论文之初也没有料想到今天吧。
+
+
+
+RLHF
+RLHF，Reinforcement Learning from Human Feedback，基于人类反馈的强化学习
+
+
+Step1：SFT，Supervised Fine-Tuning，有监督微调。顾名思义，它是在有监督（有标注）数据上微调训练得到的。这里的监督数据其实就是输入Prompt，输出相应的回复，只不过这里的回复是人工编写的。这个工作要求比一般标注要高，其实算是一种创作了。
+Step2：RM，Reward Model，奖励模型。具体来说，一个Prompt丢给前一步的SFT，输出若干个（4-9个）回复，由标注人员对这些回复进行排序。然后从4-9个中每次取2个，因为是有序的，就可以用来训练这个奖励模型，让模型学习到这个好坏评价。这一步非常关键，它就是所谓的Human Feedback，引导下一步模型的进化方向。
+Step3：RL，Reinforcement Learning，强化学习，使用PPO策略进行训练。PPO，Proximal Policy Optimization，近端策略优化，是一种强化学习优化方法，它背后的主要思想是避免每次太大的更新，提高训练的稳定性。具体过程如下：首先需要初始化一个语言模型，然后丢给它一个Prompt，它生成一个回复，上一步的RM给这个回复一个打分，这个打分回传给模型更新参数。这里的这个模型在强化学习视角下就是一个策略。这一步有个很重要的动作，就是更新模型时会考虑模型每一个Token的输出和第一步SFT输出之间的差异性，要让它俩尽量相似。这是为了缓解强化学习可能的过度优化。
+
+
+Embedding本质就是一组稠密向量，用来表示一段文本（可以是字、词、句、段等），获取到这个表示后，我们就可以进一步做一些任务。
+
+
